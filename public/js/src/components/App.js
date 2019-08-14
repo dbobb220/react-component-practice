@@ -4,9 +4,7 @@ function App(){
         <div id="wrapper">
           <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <TopNav messages={state.messages}/>
-              {/*   <SideNav>   */}
-             
-              {/*   </SideNav>   */}
+            <SideNav />
           </nav>
   
           <div id="page-wrapper">
@@ -32,25 +30,15 @@ function App(){
                     <Orders newOrders={state.newOrders} />
                     <Tickets tickets={state.tickets} />
                   </div>
-                  
-                  {/*   <AreaChart>   */}
-
-                  {/*   </AreaChart>   */}
-  
+                    <AreaChart />
                   <div className="row">
-  
-  
-                      {/*   <DonutChart>   */}
-
-                      {/*   </DonutChart>   */}
-  
-  
-                      <div className="col-lg-4">
+                    <DonutChart />
+                    <div className="col-lg-4">
                         <TaskPanel tasks={state.tasks}/>
-                      </div>
-                      <div className="col-lg-4">
-                          <TransactionPanel orders={state.orders}/>
-                      </div>
+                    </div>
+                    <div className="col-lg-4">
+                        <TransactionPanel orders={state.orders}/>
+                    </div>
                   </div>
               </div>
           </div>

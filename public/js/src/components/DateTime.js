@@ -1,6 +1,6 @@
 function DateTime(props) {
     return (
-        <p className="small text-muted"><i className="fa fa-clock-o"></i>{props.message.datetime}</p>
+        <p className="small text-muted"><i className="fa fa-clock-o"></i>{props.messages.date}</p>
     )
 }
 

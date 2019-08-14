@@ -16,7 +16,7 @@ function TransactionPanel (props) {
                             </tr>
                         </thead>
                         <tbody>
-                            <TransactionRow order={props.order}/>
+                            <TransactionRow order={props.orders}/>
                         </tbody>
                     </table>
                 </div>
