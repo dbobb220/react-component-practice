@@ -3,11 +3,7 @@ function App(){
     <div> 
         <div id="wrapper">
           <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            {/*   <TopNav>   */}
-
-            {/*   </TopNav>   */}
-
-  
+            <TopNav messages={state.messages}/>
               {/*   <SideNav>   */}
              
               {/*   </SideNav>   */}
@@ -31,27 +27,10 @@ function App(){
                       </div>
                   </div>
                   <div className="row">
-  
-                     {/*   </Comments>   */}
-                      
-                      {/*   </Comments>   */}
-  
-                      {/*   <Tasks>   */}
-                      
-                      {/*   </Tasks>   */}
-  
-                      {/*   <Orders>   */}
-                      
-                      {/*   </Orders>   */}
-  
-  
-                      {/*   <Tickets>   */}
-                     
-                      {/*   </Tickets>   */}
-  
-  
-  
-  
+                    <Comments newComments={state.newComments} />
+                    <Tasks newTasks={state.newTasks} />
+                    <Orders newOrders={state.newOrders} />
+                    <Tickets tickets={state.tickets} />
                   </div>
                   
                   {/*   <AreaChart>   */}
@@ -67,29 +46,14 @@ function App(){
   
   
                       <div className="col-lg-4">
-                          {/*   <TasksPanel>   */}
-                         
-                          {/*   </TasksPanel>   */}
-  
-  
+                        <TaskPanel tasks={state.tasks}/>
                       </div>
                       <div className="col-lg-4">
-  
-  
-                          {/*   </TransactionsPanel>   */}
-    
-                          {/*   </TransactionsPanel>   */}
-  
+                          <TransactionPanel orders={state.orders}/>
                       </div>
                   </div>
-                  
-  
               </div>
-              
-  
           </div>
-          
-  
       </div>
     </div>)
 }

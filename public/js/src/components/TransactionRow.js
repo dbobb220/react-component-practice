@@ -1,6 +1,10 @@
-<tr>
-    <td>3326</td>
-    <td>10/21/2013</td>
-    <td>3:29 PM</td>
-    <td>$321.33</td>
-</tr>
+function TransactionRow(props) {
+    return (
+        <tr>
+            <td>{props.order.number}</td>
+            <td>{props.order.date}</td>
+            <td>{props.order.time}</td>
+            <td>{props.order.amount}</td>
+        </tr>
+    )
+}
