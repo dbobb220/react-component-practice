@@ -7,10 +7,10 @@ function MessagePreview (props) {
                     <img className="media-object" src="http://placehold.it/50x50" alt="" />
                 </span>
                 <div className="media-body">
-                    <h5 className="media-heading"><strong>{props.messages.name}</strong>
+                    <h5 className="media-heading"><strong>{props.messageName}</strong>
                     </h5>
-                    <DateTime dateTime={props.messages.date}/>
-                    <p>{props.messages.message}</p>
+                    <p className="small text-muted"><i className="fa fa-clock-o"></i>{props.messageDate}</p>
+                    <p>{props.messageMessage}</p>
                 </div>
             </div>
         </a>

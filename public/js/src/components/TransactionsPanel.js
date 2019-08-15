@@ -1,4 +1,16 @@
 function TransactionPanel (props) {
+    let orders = props.orders.map((order, i) => {
+        return (
+            <TransactionRow
+                key={i} 
+                orderId={order.id} 
+                orderDate={order.orderDate} 
+                orderTime={order.orderTime} 
+                orderAmount={order.amount} 
+            />
+        )
+    })
+
     return (
         <div className="panel panel-default">
             <div className="panel-heading">
@@ -16,7 +28,7 @@ function TransactionPanel (props) {
                             </tr>
                         </thead>
                         <tbody>
-                            <TransactionRow order={props.orders}/>
+                            {orders}
                         </tbody>
                     </table>
                 </div>

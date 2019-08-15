@@ -1,10 +1,10 @@
 function TransactionRow(props) {
     return (
         <tr>
-            <td>{props.orders.id}</td>
-            <td>{props.orders.orderDate}</td>
-            <td>{props.orders.orderTime}</td>
-            <td>{props.orders.amount}</td>
+            <td>{props.orderId}</td>
+            <td>{props.orderDate}</td>
+            <td>{props.orderTime}</td>
+            <td>{props.orderAmount}</td>
         </tr>
     )
 }

@@ -1,9 +1,9 @@
-function App(){
+function App(props){
     return(
     <div> 
         <div id="wrapper">
           <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <TopNav messages={state.messages}/>
+            <TopNav messages={props.messages} />
             <SideNav />
           </nav>
   
@@ -25,19 +25,19 @@ function App(){
                       </div>
                   </div>
                   <div className="row">
-                    <Comments newComments={state.newComments} />
-                    <Tasks newTasks={state.newTasks} />
-                    <Orders newOrders={state.newOrders} />
-                    <Tickets tickets={state.tickets} />
+                    <Comments newComments={props.newComments} />
+                    <Tasks newTasks={props.newTasks} />
+                    <Orders newOrders={props.newOrders} />
+                    <Tickets tickets={props.tickets} />
                   </div>
                     <AreaChart />
                   <div className="row">
                     <DonutChart />
                     <div className="col-lg-4">
-                        <TaskPanel tasks={state.tasks}/>
+                        <TaskPanel tasks={props.tasks} />
                     </div>
                     <div className="col-lg-4">
-                        <TransactionPanel orders={state.orders}/>
+                        <TransactionPanel orders={props.orders} />
                     </div>
                   </div>
               </div>
